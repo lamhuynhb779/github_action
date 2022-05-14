@@ -9,6 +9,10 @@ on:
       - 'main'
       - 'release/**'
       - '!dev/**'
+  pull_request:
+    types: [opened, reopened, synchronize, labeled, unlabeled]
+#    paths:
+  ##    branches:
   workflow_dispatch:
 jobs:
   say-hello:
