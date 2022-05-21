@@ -41,6 +41,4 @@ jobs:
           author_email: me@aaronsaray.com
           message: "Committing code coverage image"
           add: "docs/code-coverage.png"
-          token: ${{ secrets.GH_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
