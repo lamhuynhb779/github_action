@@ -24,5 +24,8 @@ jobs:
       - name: Show file composer.json
         run: cat composer.json
 
+      - name: Show file phpunit.xml
+        run: cat phpunit.xml
+
       - name: Execute PHPUnit
-        run: php -n -dzend_extension=xdebug -dxdebug.mode=coverage ./vendor/bin/phpunit --coverage-text
+        run: ./vendor/bin/phpunit --coverage-text
