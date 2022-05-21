@@ -15,5 +15,8 @@ jobs:
       - name: Install PHP Dependencies
         run: composer install
 
+      - name: Show file composer.json
+        run: cat composer.json
+
       - name: Execute PHPUnit
         run: php -n -dzend_extension=xdebug -dxdebug.mode=coverage ./vendor/bin/phpunit --coverage-text
