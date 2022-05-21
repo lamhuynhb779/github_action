@@ -34,13 +34,6 @@ jobs:
       - name: Generate code coverage image
         run: php generate-code-coverage-image.php
 
-      - name: Login to GitHub Packages
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Commit Code Coverage Image to Repo
         uses: EndBug/add-and-commit@v5
         with:
@@ -48,3 +41,5 @@ jobs:
           author_email: me@aaronsaray.com
           message: "Committing code coverage image"
           add: "docs/code-coverage.png"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
