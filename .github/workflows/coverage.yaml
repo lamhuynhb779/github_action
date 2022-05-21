@@ -16,7 +16,7 @@ jobs:
         run: composer install
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3
+        run: .\vendor\bin\phpunit --coverage-text
         env:
           XDEBUG_MODE: coverage
         with:
