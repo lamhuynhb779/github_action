@@ -19,7 +19,7 @@ jobs:
           coverage: xdebug2
 
       - name: Install PHP Dependencies
-        run: composer install --with-dependencies
+        run: composer install
 
       - name: Show file composer.json
         run: cat composer.json
