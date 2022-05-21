@@ -16,4 +16,4 @@ jobs:
         run: composer install
 
       - name: Execute PHPUnit
-        run: ./vendor/bin/phpunit --verbose --coverage-text
+        run: php -n -dzend_extension=xdebug -dxdebug.mode=coverage ./vendor/bin/phpunit --coverage-text
