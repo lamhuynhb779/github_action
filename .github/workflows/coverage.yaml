@@ -29,4 +29,11 @@ jobs:
         run: cat phpunit.xml
 
       - name: Execute PHPUnit
-        run: ./vendor/bin/phpunit --coverage-text
+        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODE_COV_TOKEN }}
+          files: ./coverage.xml
+          verbose: true
