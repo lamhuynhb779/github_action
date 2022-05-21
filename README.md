@@ -13,7 +13,7 @@
 Check php xdebug and download suitable version
 - Step 1 : `php -i > phpinfo.txt`
 - Step 2 : For enabling support for Xdebug in the framework, download the appropriate DLL as mentioned in the ‘Instructions’ section in https://xdebug.org/wizard.
-  ![img_1.png](E:\data\DevOps\githubaction\github_action\public\images\img_1.png)
+- ![img_1.png](./public/images/img_1.png)
 - Step 3 : Download the latest Xdebug DLL file for PHP from here. The DLL being suggested can differ based on the configuration of the machine where PHP is installed. 
 - Step 4 : Move the downloaded DLL file to the ‘ext’ folder of the PHP installer. We have renamed the DLL to php_xdebug.dll.
   ![img.png](E:\data\DevOps\githubaction\github_action\public\images\img.png)
