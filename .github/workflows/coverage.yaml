@@ -13,20 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install PHP Dependencies
-        run: "composer install --no-ansi --no-interaction --no-scripts --no-suggest --prefer-dist"
+        run: composer install
 
       - name: Execute PHPUnit
-        run: vendor/bin/phpunit --coverage-clover=coverage.xml
-
-      - name: Generate code coverage image
-        run: php generate-code-coverage-image.php
-
-      - name: Commit Code Coverage Image to Repo
-        uses: EndBug/add-and-commit@v5
-        with:
-          author_name: Aaron Saray
-          author_email: me@aaronsaray.com
-          message: "Committing code coverage image"
-          add: "docs/code-coverage.png"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: vendor/bin/phpunit --verbose --coverage-text
